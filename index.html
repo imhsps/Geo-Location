@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GeoLocation Test</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> </head>
+
+<body>
+    <header class="container">
+        <h1 class="text-center head-title"><span class="icon"></span>GeoLocation <span class="text-muted">Test</span></h1>
+        <hr> </header>
+    <div class="container text-center">
+        <div class="makeBig" id="mainScreen">
+            <form onsubmit="getURLLocation(); return false;">
+                <div class="input-group">
+                    <input type="url" class="form-control" id="urlLink" placeholder="Type the URL here...">
+                    <div class="input-group-btn hidden-xs">
+                        <button class="btn btn-default" type="submit">Locate Webpage</button>
+                        <button class="btn btn-default" type="button" onClick="getMyLocation();">My Location</button>
+                    </div>
+                </div>
+                <div class="input-group visible-xs-block input-smalldevice">
+                    <button class="btn btn-default col-sm-6" type="submit">Locate Webpage</button>
+                    <button class="btn btn-default col-sm-6" type="button" onClick="getMyLocation();">My Location</button>
+                </div>
+            </form>
+        </div>
+        <div id="myDataScreen">
+            <div class="myDataTitle">
+                <h2 id="location_title" class="location_title">{{location_title}}</h2> <img id="location_img" class="location_img" alt="Map" /> </div>
+            <hr>
+            <dl class="dl-horizontal text-left"> <dt>IP</dt>
+                <dd id="location_query">{{query}}</dd> <dt>Country</dt>
+                <dd id="location_country">{{country}}</dd> <dt>Region</dt>
+                <dd id="location_regionName">{{regionName}}</dd> <dt>City</dt>
+                <dd id="location_city">{{city}}</dd> <dt>Time Zone</dt>
+                <dd id="location_timezone">{{timezone}}</dd> <dt>Latitude</dt>
+                <dd id="location_lat">{{lat}}</dd> <dt>Longitude</dt>
+                <dd id="location_lon">{{lon}}</dd>
+            </dl>
+            <hr>
+            <p class="small text-muted" id="location_info">{{info}}</p>
+        </div>
+        <div id="noData" class="text-center"> <img src="img/crying.svg" alt="Ooops!">
+            <p id="noDataInfo">{{nodata}}</p>
+        </div>
+        <div id="resetArea">
+            <hr>
+            <button class="btn btn-sm btn-default" onClick="initializePage();">Reset Location</button>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/location.js"></script>
+</body>
+
+</html>

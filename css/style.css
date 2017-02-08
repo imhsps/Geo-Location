@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+/* Override Bootstrap's defaults */
+.container {
+	max-width: 740px;
+}
+/* Other things */
+.myDataTitle {
+	position: relative;
+	margin: 15px 0 0 0;
+}
+.myDataTitle .location_title {
+	position: absolute;
+	padding: 15px 10px;
+	margin: 10px 0 0 0;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 0 5px 5px 0;
+	font-size: 1em;
+}
+.myDataTitle .location_img {
+	width: 100%;
+	border-radius: 5px;
+	background-color: rgba(182,182,182,1.00);
+}
+#noData img {
+	max-width: 40px;
+	margin: 15px;
+}
+textarea:focus, input[type="url"]:focus {
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+/* Header and URL and Buttons from the top */
+.head-title .icon {
+	background-image: url(../img/globe.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	margin: 0 10px;
+}
+/*Buttons and input animation*/
+.makeBig input, .makeBig button {
+	height: 68px !important;
+}
+.makeBig input {
+	font-size: 20px;
+}
+.input-group input, .input-group button {
+	height: 34px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+@media (min-width: 768px) {
+	.input-group {
+		display: table;
+	}
+}
+@media (max-width: 767px) {
+	.input-group {
+		display: block;
+	}
+	.input-group input {
+		border-radius: 0px;
+	}
+}
+.input-smalldevice button {
+	margin: 10px 5px;
+}
